@@ -48,6 +48,14 @@ Rexでのログを、Log::Anyに流すようにします。
 
 Log::Logger::(info|debug)を上書きします。
 
+    @@ Rexfile
+
+    use Rex::Logger::ToLogAny;
+
+    task "..." => sub {
+        ...
+    };
+
 =cut
 
 1;
