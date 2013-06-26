@@ -52,6 +52,13 @@ Log::Logger::(info|debug)を上書きします。
 
     use Rex::Logger::ToLogAny;
 
+    # As you like
+    use Log::Any::App '$log';
+    Log::Any::App::init([
+        -screen => { level => 'info' , pattern_style => 'plain_nl', },
+        -file   => { level => 'debug', pattern_style => 'plain_nl', path => 'var/rex.log' },
+    ]);
+
     task "..." => sub {
         ...
     };
